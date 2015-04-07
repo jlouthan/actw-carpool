@@ -1,0 +1,16 @@
+{
+  "name": "Carpool-App",
+  "version": "1.0.0",
+  "description": "Simple web app to connect people within the community for carpooling",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jenny Louthan <jenny@uncorkedstudios.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "mongoose": "^4.0.1"
+  }
+}
