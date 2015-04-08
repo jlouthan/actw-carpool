@@ -43,6 +43,7 @@ section.form {
 	float: left;
 	width: 100%;
 	padding-left: 100px;
+	box-sizing: border-box;
 }
 
 section h2 {
