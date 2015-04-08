@@ -1,9 +1,9 @@
 <div>
-	<h2>Needing Rides to PDX</h2>
+	<h2>Needing Rides</h2>
 	<table>
 		<thead>
 			<tr>
-				<th>Name:</th><th>Day:</th><th>Arrive By:</th><th>Destination:</th>
+				<th>Name</th><th>Day</th><th>Arrive By</th><th>Destination</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -19,18 +19,18 @@
 </div>
 
 <div>
-	<h2>Offering Rides to PDX</h2>
+	<h2>Offering Rides</h2>
 	<table>
 		<thead>
 			<tr>
-				<th>Name:</th><th>Day:</th><th>Arrive At:</th>
+				<th>Name</th><th>Day</th><th>Arrive At</th><th>Destination</th>
 			</tr>
 		</thead>
 		<tbody>
 			{{#each postings}}
 				{{#ifEq this.type 'offer'}}
 				<tr>
-					<td><a href="mailto:{{this.email}}?subject=Can I Tag Along?">{{this.firstName}} {{this.lastName}}</a></td><td>{{this.day}}</td><td>{{this.time}}</td>
+					<td><a href="mailto:{{this.email}}?subject=Can I Tag Along?">{{this.firstName}} {{this.lastName}}</a></td><td>{{this.day}}</td><td>{{this.time}}</td><td>PDX</td>
 				</tr>
 				{{/ifEq}}
 			{{/each}}
@@ -43,16 +43,25 @@
 	<h2>Create a Posting</h2>
 	<form id="posting-form">
 
-		<label>First Name<input type="text" name="firstName"></label>
-		<label>Last Name<input type="text" name="lastName"></label>
-		<label>Email<input type="text" name="email"></label>
-		<label>
-		Type
-		<input type="radio" name="type" value="ask" checked>Ask
-		<input type="radio" name="type" value="offer">Offer
-		</label>
-		<label>Day<input type="text" name="day"></label>
-		<label>Time<input type="text" name="time"></label>
+		<label for="firstName">First Name</label>
+		<input type="text" name="firstName" id="firstName">
+		
+		<label for="lastName">Last Name</label>
+		<input type="text" name="lastName" id="lastName">
+		
+		<label for="email">Email</label>
+		<input type="text" name="email" id="email">
+		
+		<label for="type">Type</label>
+		<input type="radio" name="type" value="ask" checked><span>Ask</span>
+		<input type="radio" name="type" value="offer"><span>Offer</span>
+
+		<label for="day">Day</label>
+		<input type="text" name="day" id="day">
+
+		<label for="time">Time</label>
+		<input type="text" name="time" id="time">
+
 
 		<input type="submit" value="Submit">
 	</form>
