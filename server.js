@@ -36,5 +36,5 @@ require('./routes')(app);
 // add in error handling middleware
 // require('./backend/components/errorHandlers')(app);
 
-app.listen(8000, '0.0.0.0');
-console.log('Listening on port 8000');
+app.listen(3088, '0.0.0.0');
+console.log('Listening on port 3088');
