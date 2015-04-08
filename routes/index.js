@@ -4,7 +4,7 @@ var Posting = require('mongoose').model('Posting');
 module.exports = function(app) {
 
 	app.get('/', function(req, res){
-		Posting.find({type: 'ask'}, function(err, postings) {
+		Posting.find({}, function(err, postings) {
 			if(err) {
 				return next(err);
 			}

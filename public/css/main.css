@@ -37,3 +37,27 @@ tbody tr:hover {
 a {
 	color: #000;
 }
+
+/*form stuff*/
+section.form {
+	float: left;
+	width: 100%;
+	padding-left: 200px;
+}
+
+section h2 {
+	text-align: left;
+}
+
+input {
+	display: block;
+}
+
+label{
+	display: block;
+	text-align: left;
+}
+
+h3#success-message {
+	display: none;
+}

@@ -1,5 +1,5 @@
 <div>
-	<h2>Needing Rides</h2>
+	<h2>Needing Rides to PDX</h2>
 	<table>
 		<thead>
 			<tr>
@@ -8,56 +8,44 @@
 		</thead>
 		<tbody>
 			{{#each postings}}
+				{{#ifEq this.type 'ask'}}
 				<tr>
-					<td><a href="mailto:"{{this.email}}".com?subject=Need a Ride?">{{this.firstName}} {{this.lastName}}</a></td><td>15 April</td><td>7:00am</td><td>PDX</td>
+					<td><a href="mailto:{{this.email}}?subject=Need a Ride?">{{this.firstName}} {{this.lastName}}</a></td><td>{{this.day}}</td><td>{{this.time}}</td><td>PDX</td>
 				</tr>
+				{{/ifEq}}
 			{{/each}}
-			<tr>
-				<td><a href="mailto:jenny@uncorkedstudios.com?subject=Need a Ride?">Jenny Loutdan</a></td><td>15 April</td><td>7:00am</td><td>PDX</td>
-			</tr>
-			<tr>
-				<td>Jenny Loutdan3</td><td>15 April</td><td>7:30am</td><td>PDX</td>
-			</tr>
-			<tr>
-				<td>Jenny Loutdan2</td><td>16 April</td><td>3:30pm</td><td>PDX</td>
-			</tr>
-			<tr>
-				<td>Jenny Loutdan1</td><td>16 April</td><td>5:45pm</td><td>PDX</td>
-			</tr>
 		</tbody>
 	</table>
 </div>
 
 <div>
-	<h2>Offering Rides</h2>
+	<h2>Offering Rides to PDX</h2>
 	<table>
 		<thead>
 			<tr>
-				<th>Name:</th><th>Day:</th><th>Arrive At:</th><th>Destination:</th>
+				<th>Name:</th><th>Day:</th><th>Arrive At:</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td><a href="mailto:ann@hotmail.com?subject=Can I Tag Along?">Ann Laudick1</a></td><td>15 April</td><td>6:00am</td><td>PDX</td>
-			</tr>
-			<tr>
-				<td>Ann Laudick2</td><td>15 April</td><td>4:30pm</td><td>PDX</td>
-			</tr>
-			<tr>
-				<td>Ann Laudick3</td><td>16 April</td><td>2:30pm</td><td>PDX</td>
-			</tr>
-			<tr>
-				<td>Ann Laudick4</td><td>16 April</td><td>8:40pm</td><td>PDX</td>
-			</tr>
+			{{#each postings}}
+				{{#ifEq this.type 'offer'}}
+				<tr>
+					<td><a href="mailto:{{this.email}}?subject=Can I Tag Along?">{{this.firstName}} {{this.lastName}}</a></td><td>{{this.day}}</td><td>{{this.time}}</td>
+				</tr>
+				{{/ifEq}}
+			{{/each}}
 		</tbody>
 	</table>
 </div>
 
-<section>
-	<form action="/api/posting" method="POST">
+<section class="form">
+	<h3 id="success-message">Posting Successfully Added!</h3>
+	<h2>Create a Posting</h2>
+	<form id="posting-form">
 
 		<label>First Name<input type="text" name="firstName"></label>
 		<label>Last Name<input type="text" name="lastName"></label>
+		<label>Email<input type="text" name="email"></label>
 		<label>
 		Type
 		<input type="radio" name="type" value="ask" checked>Ask

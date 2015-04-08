@@ -4,8 +4,10 @@ var mongoose = require('mongoose'),
 var PostingSchema = new Schema({
 	firstName: String,
 	lastName: String,
+	email: String,
 	type: String,
-	text: String
+	day: String,
+	time: String
 });
 
 mongoose.model('Posting', PostingSchema);
