@@ -52,3 +52,20 @@
 		</tbody>
 	</table>
 </div>
+
+<section>
+	<form action="/api/posting" method="POST">
+
+		<label>First Name<input type="text" name="firstName"></label>
+		<label>Last Name<input type="text" name="lastName"></label>
+		<label>
+		Type
+		<input type="radio" name="type" value="ask" checked>Ask
+		<input type="radio" name="type" value="offer">Offer
+		</label>
+		<label>Day<input type="text" name="day"></label>
+		<label>Time<input type="text" name="time"></label>
+
+		<input type="submit" value="Submit">
+	</form>
+</section>

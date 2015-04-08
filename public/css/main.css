@@ -12,7 +12,11 @@ h2 {
 
 table {
 	border-collapse: collapse;
-}
+	background:#fff;
+  	border-radius: 5px;
+  	margin:50px auto;
+  	box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+ }
 
 thead tr{
 	background: #dddddd;
@@ -23,17 +27,9 @@ td, th{
 	font-family: 'Patua One', cursive;
 }
 
-table {
-  background:#fff;
-  border-radius: 5px;
-  margin:50px auto;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
-}
-
 tbody tr:nth-child(2n) {
   background:#f0f3f5;
 }
-
 tbody tr:hover {
 	background: #aaa;
 }
