@@ -1,6 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
-// var exphbs  = require('express-handlebars');
+var exphbs  = require('express-handlebars');
 var path = require('path');
 
 var db = mongoose.connect('mongodb://localhost/carpool');
@@ -11,14 +11,15 @@ var app = express();
 //Handlebars & other front end config
 app.set('views', path.join(__dirname, 'views'));
 // app.engine('handlebars', exphbs( require('./exphbsOptions') ) );
-// app.set('view engine', 'handlebars');
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // back end config
 require('./backend/config')(app);
 
 // include all routes for frontend
-// require('./routes')(app);
+require('./routes')(app);
 
 // include all api routes
 require('./backend/routes')(app);

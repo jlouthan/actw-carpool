@@ -1,0 +1,39 @@
+@import url(http://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+
+div {
+	width: 50%;
+	float: left;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Patua One', cursive;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+thead tr{
+	background: #dddddd;
+}
+
+td, th{
+	padding: 1.0rem;
+	font-family: 'Patua One', cursive;
+}
+
+table {
+  background:#fff;
+  border-radius: 5px;
+  margin:50px auto;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+}
+
+tbody tr:nth-child(2n) {
+  background:#f0f3f5;
+}
+
+a {
+	color: #000;
+}
