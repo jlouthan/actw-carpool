@@ -7,6 +7,11 @@
 			</tr>
 		</thead>
 		<tbody>
+			{{#each postings}}
+				<tr>
+					<td><a href="mailto:"{{this.email}}".com?subject=Need a Ride?">{{this.firstName}} {{this.lastName}}</a></td><td>15 April</td><td>7:00am</td><td>PDX</td>
+				</tr>
+			{{/each}}
 			<tr>
 				<td><a href="mailto:jenny@uncorkedstudios.com?subject=Need a Ride?">Jenny Loutdan</a></td><td>15 April</td><td>7:00am</td><td>PDX</td>
 			</tr>

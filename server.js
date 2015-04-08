@@ -18,11 +18,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // back end config
 require('./backend/config')(app);
 
-// include all routes for frontend
-require('./routes')(app);
-
 // include all api routes
 require('./backend/routes')(app);
+
+// include all routes for frontend
+require('./routes')(app);
 
 // add in error handling middleware
 // require('./backend/components/errorHandlers')(app);

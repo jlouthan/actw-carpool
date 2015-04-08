@@ -34,6 +34,10 @@ tbody tr:nth-child(2n) {
   background:#f0f3f5;
 }
 
+tbody tr:hover {
+	background: #aaa;
+}
+
 a {
 	color: #000;
 }
