@@ -10,7 +10,6 @@ var app = express();
 
 //Handlebars & other front end config
 app.set('views', path.join(__dirname, 'views'));
-// app.engine('handlebars', exphbs( require('./exphbsOptions') ) );
 app.engine('handlebars', exphbs({
 	defaultLayout: 'main',
 	helpers: { 
@@ -32,9 +31,6 @@ require('./backend/routes')(app);
 
 // include all routes for frontend
 require('./routes')(app);
-
-// add in error handling middleware
-// require('./backend/components/errorHandlers')(app);
 
 app.listen(3088, '0.0.0.0');
 console.log('Listening on port 3088');
