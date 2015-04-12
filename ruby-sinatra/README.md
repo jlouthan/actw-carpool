@@ -6,7 +6,7 @@ Minimal implementation written in [Ruby](https://www.ruby-lang.org/) and [Sinatr
 
 You will need to have ruby and its package manager [RubyGems](https://rubygems.org/) installed.  You will also need to install [MongoDB](https://www.mongodb.org/).
 
-```
+```shell
 # ensure that ruby is installed
 $ ruby -v
 
