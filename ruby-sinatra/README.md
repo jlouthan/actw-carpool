@@ -1,4 +1,35 @@
-Links to commits showing the following steps ...
+# actw-carpool
+
+Minimal implementation written in [Ruby](https://www.ruby-lang.org/) and [Sinatra](http://www.sinatrarb.com/)
+
+## Get the app up and running
+
+You will need to have ruby and its package manager [RubyGems](https://rubygems.org/) installed.  You will also need to install [MongoDB](https://www.mongodb.org/).
+
+```
+# ensure that ruby is installed
+$ ruby -v
+
+# ensure that gem is installed
+$ gem -v
+
+# install bundler gem, which will install dependencies
+$ gem install bundler
+$ bundler -v
+
+# cd into this project's directory
+$ cd actw-carpool/ruby-sinatra
+
+# install dependencies
+$ bundle
+
+# run the app!
+$ ruby app.rb
+
+(also make sure that MongoDB is running, eg. by running `mongod`)
+```
+
+Now you can follow along with the following steps ...
 
  - [Hello World Sinatra web app](https://github.com/remi/actw-carpool/commit/b64b6c85540bed206f295130d3dc7a211f57a5c0)
  - [Now render a template (using ERB)](https://github.com/remi/actw-carpool/commit/3d63aaf08d06339193133949985fa4314dedc65e)
