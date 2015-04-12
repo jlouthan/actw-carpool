@@ -1,1 +1,22 @@
-<p><%= @message_to_display %> - from template</p>
+<form action="/postings" method="post">
+  <input type="radio" name="type" value="ask" checked><span>Ask</span>
+  <input type="radio" name="type" value="offer"><span>Offer</span>
+  <input type="text" name="first_name" placeholder="First Name">
+  <input type="text" name="last_name" placeholder="Last Name">
+  <input type="text" name="email" placeholder="Email Address">
+  <input type="text" name="day" placeholder="What date?">
+  <input type="text" name="time" placeholder="What time?">
+  <input type="submit" value="Create a Posting">
+</form>
+
+<h1>Postings</h1>
+<ul>
+  <% for posting in @postings %>
+    <% if posting.type == "ask" %>
+      <li><%= posting.first_name %> <%= posting.last_name %> would like a ride on <%= posting.day %> at <%= posting.time %></li>
+    <% else %>
+      <li><%= posting.first_name %> <%= posting.last_name %> is offering a ride on <%= posting.day %> at <%= posting.time %></li>
+    <% end %>
+    <tr>
+  <% end %>
+</ul>
