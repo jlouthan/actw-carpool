@@ -1,0 +1,6 @@
+development:
+  sessions:
+    default:
+      database: actw-carpool
+      hosts:
+        - localhost:27017

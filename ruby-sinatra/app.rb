@@ -1,7 +1,14 @@
 require "sinatra"
 require "erb"
 
+require_relative "posting"
+
 get "/" do
-  @message_to_display = "Hello World"
+  @postings = Posting.all
   erb :index
+end
+
+post "/postings" do
+  Posting.create params
+  redirect "/"
 end
