@@ -1,5 +1,7 @@
 require "sinatra"
+require "erb"
 
 get "/" do
-  "Hello World"
+  @message_to_display = "Hello World"
+  erb :index
 end
